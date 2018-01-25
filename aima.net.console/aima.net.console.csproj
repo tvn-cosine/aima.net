@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28F8A591-7A7A-4F84-A5DC-08294649D2E5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>aima.net.console</RootNamespace>
+    <AssemblyName>aima.net.console</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>aima.net.demo.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agent\nondeterministicvacuumenvironment\AndOrSearch.cs" />
+    <Compile Include="agent\trivial\ModelBasedReflexVacuumAgentDemo.cs" />
+    <Compile Include="agent\trivial\ReflexVacuumAgentDemo.cs" />
+    <Compile Include="agent\trivial\SimpleReflexVacuumAgentDemo.cs" />
+    <Compile Include="agent\trivial\TableDrivenVacuumAgentDemo.cs" />
+    <Compile Include="learning\chapter18\BackPropogationDeepLearningDemo.cs" />
+    <Compile Include="learning\chapter18\BackPropogationDemo.cs" />
+    <Compile Include="learning\chapter18\DecisionListDemo.cs" />
+    <Compile Include="learning\chapter18\DecisionTreeDemo.cs" />
+    <Compile Include="learning\chapter18\EnsembleLearningDemo.cs" />
+    <Compile Include="learning\chapter18\PerceptronDemo.cs" />
+    <Compile Include="learning\chapter21\LearningDemoBase.cs" />
+    <Compile Include="learning\chapter21\passiveADPAgentDemo.cs" />
+    <Compile Include="learning\chapter21\PassiveTDAgentDemo.cs" />
+    <Compile Include="learning\chapter21\QLearningAgentDemo.cs" />
+    <Compile Include="logic\DpllDemo.cs" />
+    <Compile Include="logic\fol\FolDemoBase.cs" />
+    <Compile Include="logic\fol\FOL_bcAskDemo.cs" />
+    <Compile Include="logic\fol\FOL_CNFConversion.cs" />
+    <Compile Include="logic\fol\FOL_Demodulation.cs" />
+    <Compile Include="logic\fol\FOL_fcAskDemo.cs" />
+    <Compile Include="logic\fol\FOL_ModelEliminationDemo.cs" />
+    <Compile Include="logic\fol\FOL_OTTERDemo.cs" />
+    <Compile Include="logic\fol\FOL_Paramodulation.cs" />
+    <Compile Include="logic\fol\FOL_TFMResolutionDemo.cs" />
+    <Compile Include="logic\fol\UnifierDemo.cs" />
+    <Compile Include="logic\PlFcEntailsDemo.cs" />
+    <Compile Include="logic\PlResolutionDemo.cs" />
+    <Compile Include="logic\TTEntailsDemo.cs" />
+    <Compile Include="logic\WalkSatDemo.cs" />
+    <Compile Include="probability\chapter13\FullJointDistributionModelDemo.cs" />
+    <Compile Include="probability\chapter14\approx\BayesGibbsAskDemo.cs" />
+    <Compile Include="probability\chapter14\approx\BayesLikelihoodWeightingDemo.cs" />
+    <Compile Include="probability\chapter14\approx\BayesRejectionSamplingDemo.cs" />
+    <Compile Include="probability\chapter14\exact\BayesEliminationAskDemo.cs" />
+    <Compile Include="probability\chapter14\exact\BayesEnumerationAskDemo.cs" />
+    <Compile Include="probability\chapter15\FixedLagSmoothingDemo.cs" />
+    <Compile Include="probability\chapter15\ForwardBackWardDemo.cs" />
+    <Compile Include="probability\chapter15\ParticleFilterinfDemo.cs" />
+    <Compile Include="probability\chapter17\PolicyIterationDemo.cs" />
+    <Compile Include="probability\chapter17\ValueIterationDemo.cs" />
+    <Compile Include="probability\ProbabilityDemoBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleAStarDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleAStarManhattanDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleDemoBase.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleDLSDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleGreedyBestFirstDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleGreedyBestFirstManhattanDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleIDLSDemo.cs" />
+    <Compile Include="search\eightpuzzle\EightPuzzleSimulatedAnnealingDemo.cs" />
+    <Compile Include="search\eightpuzzle\GenerateRandomEightPuzzleDemo.cs" />
+    <Compile Include="search\mapcoloring\FlexibleBacktrackingSolver.cs" />
+    <Compile Include="search\mapcoloring\FlexibleBacktrackingSolverMrvDegLcvAc3.cs" />
+    <Compile Include="search\mapcoloring\MinConflictsSolver.cs" />
+    <Compile Include="search\nqueens\NQueensDemoBase.cs" />
+    <Compile Include="search\nqueens\NQueensGeneticAlgorithmSearch.cs" />
+    <Compile Include="search\nqueens\NQueensHillClimbingSearch.cs" />
+    <Compile Include="search\nqueens\NQueensSimulatedAnnealingSearch.cs" />
+    <Compile Include="search\nqueens\NQueensWithBreadthFirstSearch.cs" />
+    <Compile Include="search\nqueens\NQueensWithDepthFirstSearch.cs" />
+    <Compile Include="search\nqueens\NQueensWithIterativeDeepeningSearch.cs" />
+    <Compile Include="search\nqueens\NQueensWithRecursiveDLS.cs" />
+    <Compile Include="search\SearchDemoBase.cs" />
+    <Compile Include="search\tictactoe\AlphaBetaDemo.cs" />
+    <Compile Include="search\tictactoe\MinimaxDemo.cs" />
+    <Compile Include="svm\SVMExample.cs" />
+    <Compile Include="util\SearchFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="animal-test.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config" />
+    <None Include="DataResource.class">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="heart_scale.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="iris.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="orings.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rabbiteyes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="restaurant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wordlist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="zoo.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aima.net\aima.net.csproj">
+      <Project>{aee45085-3a03-47aa-9152-0e684e221887}</Project>
+      <Name>aima.net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ascii-robotdata1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iris.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="orings.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rabbiteyes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zoo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

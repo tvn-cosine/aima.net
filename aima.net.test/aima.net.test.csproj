@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6245BE5-92FF-4DD2-B475-D8CD880B9F35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aima.net.test</RootNamespace>
+    <AssemblyName>aima.net.test</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="experiment\logic\propositional\algorithms\WalkSATExperiment.cs" />
+    <Compile Include="performance\logic\fol\inference\FOLTFMResolutionPerformance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="unit\agent\agentprogram\simplerule\RuleTest.cs" />
+    <Compile Include="unit\agent\agentprogram\TableDrivenAgentProgramTest.cs" />
+    <Compile Include="unit\agent\DynamicActionTest.cs" />
+    <Compile Include="unit\agent\DynamicAgentTest.cs" />
+    <Compile Include="unit\agent\DynamicEnvironmentStateTest.cs" />
+    <Compile Include="unit\agent\DynamicPerceptTest.cs" />
+    <Compile Include="unit\agent\DynamicStateTest.cs" />
+    <Compile Include="unit\agent\PerceptSequenceTest.cs" />
+    <Compile Include="unit\environment\cellworld\CellWorldTest.cs" />
+    <Compile Include="unit\environment\eightpuzzle\EightPuzzleBoardMoveTest.cs" />
+    <Compile Include="unit\environment\eightpuzzle\EightPuzzleBoardTest.cs" />
+    <Compile Include="unit\environment\eightpuzzle\EightPuzzleFunctionsTest.cs" />
+    <Compile Include="unit\environment\eightpuzzle\MisplacedTileHeuristicFunctionTest.cs" />
+    <Compile Include="unit\environment\map\MapAgentTest.cs" />
+    <Compile Include="unit\environment\map\MapEnvironmentTest.cs" />
+    <Compile Include="unit\environment\map\MapFunctionsTest.cs" />
+    <Compile Include="unit\environment\map\MapTest.cs" />
+    <Compile Include="unit\environment\nqueens\NQueensBoardTest.cs" />
+    <Compile Include="unit\environment\nqueens\NQueensFunctionsTest.cs" />
+    <Compile Include="unit\environment\nqueens\NQueensGenAlgoUtilTest.cs" />
+    <Compile Include="unit\environment\tictactoe\TicTacToeTest.cs" />
+    <Compile Include="unit\environment\vacuum\ModelBasedReflexVacuumAgentTest.cs" />
+    <Compile Include="unit\environment\vacuum\ReflexVacuumAgentTest.cs" />
+    <Compile Include="unit\environment\vacuum\SimpleReflexVacuumAgentTest.cs" />
+    <Compile Include="unit\environment\vacuum\TableDrivenVacuumAgentTest.cs" />
+    <Compile Include="unit\environment\vacuum\VacuumEnvironmentTest.cs" />
+    <Compile Include="unit\environment\wumpusworld\HybridWumpusAgentTest.cs" />
+    <Compile Include="unit\environment\wumpusworld\WumpusFunctionsTest.cs" />
+    <Compile Include="unit\environment\wumpusworld\WumpusKnowledgeBaseTest.cs" />
+    <Compile Include="unit\learning\framework\DataSetTest.cs" />
+    <Compile Include="unit\learning\framework\InformationAndGainTest.cs" />
+    <Compile Include="unit\learning\framework\MockDataSetSpecification.cs" />
+    <Compile Include="unit\learning\inductive\DecisionListTest.cs" />
+    <Compile Include="unit\learning\inductive\DLTestTest.cs" />
+    <Compile Include="unit\learning\inductive\MockDLTestFactory.cs" />
+    <Compile Include="unit\learning\learners\DecisionTreeTest.cs" />
+    <Compile Include="unit\learning\learners\EnsembleLearningTest.cs" />
+    <Compile Include="unit\learning\learners\LearnerTest.cs" />
+    <Compile Include="unit\learning\neural\BackPropagationTest.cs" />
+    <Compile Include="unit\learning\neural\LayerTest.cs" />
+    <Compile Include="unit\logic\fol\CNFConverterTest.cs" />
+    <Compile Include="unit\logic\fol\CommonFOLInferenceProcedureTests.cs" />
+    <Compile Include="unit\logic\fol\inference\DemodulationTest.cs" />
+    <Compile Include="unit\logic\fol\inference\FOLBCAskTest.cs" />
+    <Compile Include="unit\logic\fol\inference\FOLFCAskTest.cs" />
+    <Compile Include="unit\logic\fol\inference\FOLModelEliminationTest.cs" />
+    <Compile Include="unit\logic\fol\inference\FOLOTTERLikeTheoremProverTest.cs" />
+    <Compile Include="unit\logic\fol\inference\FOLTFMResolutionTest.cs" />
+    <Compile Include="unit\logic\fol\inference\ParamodulationTest.cs" />
+    <Compile Include="unit\logic\fol\kb\data\ChainTest.cs" />
+    <Compile Include="unit\logic\fol\kb\data\ClauseTest.cs" />
+    <Compile Include="unit\logic\fol\kb\FOLKnowledgeBaseTest.cs" />
+    <Compile Include="unit\logic\fol\parsing\FOLLexerTest.cs" />
+    <Compile Include="unit\logic\fol\parsing\FOLParserTest.cs" />
+    <Compile Include="unit\logic\fol\PredicateCollectorTest.cs" />
+    <Compile Include="unit\logic\fol\SubstVisitorTest.cs" />
+    <Compile Include="unit\logic\fol\SubsumptionEliminationTest.cs" />
+    <Compile Include="unit\logic\fol\UnifierTest.cs" />
+    <Compile Include="unit\logic\fol\VariableCollectorTest.cs" />
+    <Compile Include="unit\logic\propositional\inference\DPLLTest.cs" />
+    <Compile Include="unit\logic\propositional\inference\PLFCEntailsTest.cs" />
+    <Compile Include="unit\logic\propositional\inference\PLResolutionTest.cs" />
+    <Compile Include="unit\logic\propositional\inference\TTEntailsTest.cs" />
+    <Compile Include="unit\logic\propositional\kb\data\ClauseTest.cs" />
+    <Compile Include="unit\logic\propositional\kb\data\ConvertToConjunctionOfClausesTest.cs" />
+    <Compile Include="unit\logic\propositional\kb\data\LiteralTest.cs" />
+    <Compile Include="unit\logic\propositional\kb\data\ModelTest.cs" />
+    <Compile Include="unit\logic\propositional\kb\KnowledgeBaseTest.cs" />
+    <Compile Include="unit\logic\propositional\parsing\ComplexSentenceTest.cs" />
+    <Compile Include="unit\logic\propositional\parsing\ListTest.cs" />
+    <Compile Include="unit\logic\propositional\parsing\PLLexerTest.cs" />
+    <Compile Include="unit\logic\propositional\parsing\PLParserTest.cs" />
+    <Compile Include="unit\logic\propositional\parsing\PropositionSymbolTest.cs" />
+    <Compile Include="unit\logic\propositional\visitors\ConvertToCNFTest.cs" />
+    <Compile Include="unit\logic\propositional\visitors\SymbolCollectorTest.cs" />
+    <Compile Include="unit\nlp\parse\CYKParseTest.cs" />
+    <Compile Include="unit\nlp\parse\GrammarTest.cs" />
+    <Compile Include="unit\nlp\parse\LexiconTest.cs" />
+    <Compile Include="unit\nlp\parse\ProbCNFGrammarTest.cs" />
+    <Compile Include="unit\nlp\parse\ProbContextFreeGrammarTest.cs" />
+    <Compile Include="unit\nlp\parse\RuleTest.cs" />
+    <Compile Include="unit\nlp\rank\HITSTest.cs" />
+    <Compile Include="unit\nlp\rank\PagesDatasetTest.cs" />
+    <Compile Include="unit\nlp\rank\WikiLinkFinderTest.cs" />
+    <Compile Include="unit\probability\bayes\approx\GibbsAskTest.cs" />
+    <Compile Include="unit\probability\bayes\approx\LikelihoodWeightingTest.cs" />
+    <Compile Include="unit\probability\bayes\approx\ParticleFilterTest.cs" />
+    <Compile Include="unit\probability\bayes\approx\PriorSampleTest.cs" />
+    <Compile Include="unit\probability\bayes\approx\RejectionSamplingTest.cs" />
+    <Compile Include="unit\probability\bayes\exact\BayesianInferenceTest.cs" />
+    <Compile Include="unit\probability\bayes\exact\EliminationAskTest.cs" />
+    <Compile Include="unit\probability\bayes\exact\EnumerationAskTest.cs" />
+    <Compile Include="unit\probability\bayes\impl\CPTTest.cs" />
+    <Compile Include="unit\probability\bayes\model\FiniteBayesModelTest.cs" />
+    <Compile Include="unit\probability\CommonFiniteProbabilityModelTests.cs" />
+    <Compile Include="unit\probability\CommonProbabilityModelTests.cs" />
+    <Compile Include="unit\probability\full\FullJointProbabilityModelTest.cs" />
+    <Compile Include="unit\probability\hmm\exact\FixedLagSmoothingTest.cs" />
+    <Compile Include="unit\probability\hmm\exact\HMMForwardBackwardConstantSpaceTest.cs" />
+    <Compile Include="unit\probability\hmm\exact\HMMForwardBackwardTest.cs" />
+    <Compile Include="unit\probability\mdp\MarkovDecisionProcessTest.cs" />
+    <Compile Include="unit\probability\mdp\PolicyIterationTest.cs" />
+    <Compile Include="unit\probability\mdp\ValueIterationTest.cs" />
+    <Compile Include="unit\probability\temporal\CommonForwardBackwardTest.cs" />
+    <Compile Include="unit\probability\temporal\generic\ForwardBackwardTest.cs" />
+    <Compile Include="unit\probability\util\ProbabilityTableTest.cs" />
+    <Compile Include="unit\probability\util\ProbUtilTest.cs" />
+    <Compile Include="unit\search\csp\AssignmentTest.cs" />
+    <Compile Include="unit\search\csp\CSPTest.cs" />
+    <Compile Include="unit\search\csp\MapCSPTest.cs" />
+    <Compile Include="unit\search\csp\TreeCspSolverTest.cs" />
+    <Compile Include="unit\search\framework\MetricsTest.cs" />
+    <Compile Include="unit\search\framework\NodeTest.cs" />
+    <Compile Include="unit\search\framework\SolutionTesterTest.cs" />
+    <Compile Include="unit\search\informed\AStarSearchTest.cs" />
+    <Compile Include="unit\search\informed\GreedyBestFirstSearchTest.cs" />
+    <Compile Include="unit\search\informed\RecursiveBestFirstSearchTest.cs" />
+    <Compile Include="unit\search\local\SimulatedAnnealingSearchTest.cs" />
+    <Compile Include="unit\search\nondeterministic\AndOrSearchTest.cs" />
+    <Compile Include="unit\search\online\LRTAStarAgentTest.cs" />
+    <Compile Include="unit\search\online\OnlineDFSAgentTest.cs" />
+    <Compile Include="unit\search\uninformed\BidirectionalSearchTest.cs" />
+    <Compile Include="unit\search\uninformed\BreadthFirstSearchTest.cs" />
+    <Compile Include="unit\search\uninformed\DepthFirstSearchTest.cs" />
+    <Compile Include="unit\search\uninformed\DepthLimitedSearchTest.cs" />
+    <Compile Include="unit\search\uninformed\IterativeDeepeningSearchTest.cs" />
+    <Compile Include="unit\search\uninformed\UniformCostSearchTest.cs" />
+    <Compile Include="unit\util\datastructure\TableTest.cs" />
+    <Compile Include="unit\util\datastructure\XYLocationTest.cs" />
+    <Compile Include="unit\util\DisjointSetsTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Circle2DTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Ellipse2DTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Line2DTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Polyline2DTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Rect2DTest.cs" />
+    <Compile Include="unit\util\math\geom\shapes\Vector2DTest.cs" />
+    <Compile Include="unit\util\math\geom\SVGGroupParserTest.cs" />
+    <Compile Include="unit\util\math\MixedRadixNumberTest.cs" />
+    <Compile Include="unit\util\SetOpsTest.cs" />
+    <Compile Include="unit\util\UtilTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataResource.class">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="heart_scale.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="iris.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="orings.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="rabbiteyes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="restaurant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wordlist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="zoo.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aima.net\aima.net.csproj">
+      <Project>{aee45085-3a03-47aa-9152-0e684e221887}</Project>
+      <Name>aima.net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ascii-robotdata1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iris.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="orings.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rabbiteyes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zoo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>
